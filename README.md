@@ -4,3 +4,13 @@ This is a glorified random number generator made in Python. It generates random 
 
 This is an educational project for me to learn coding. It shall not be used for malicious purposes. I do not promote my tools. I do not take responsibility for any bad usage of this tool.
 
+Done:
+Companies that use 16 digit cards.
+
+Things to Do:
+Leading Zeros
+Loops
+Attaching random name to card
+Attaching random exp date to card
+Attaching random CVC to card
+Storing card info to notepad
