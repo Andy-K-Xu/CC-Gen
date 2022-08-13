@@ -58,10 +58,12 @@ def main():
         voyager()
     else:
         main()
-main()
-repeat = input("Do you want to generate 100 more?\nYes or No?")
 
-if repeat == "Yes":
-    main()
-else:
-    exit()
+def restart():
+    repeat = input("Do you want to generate 100 more?\n Yes or No?")
+    if repeat == "Yes":
+        main()
+    else:
+        exit()
+
+main()
