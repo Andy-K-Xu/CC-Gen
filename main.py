@@ -6,7 +6,7 @@ def main():
     numbers = []
 
     list = ["Visa", "Mastercard", "Enroute", "Discover", "JCB15", "JCB16", "Voyager"]
-    print("\nThis will generate 100 cards at once. You will have a chance to repeat after.")
+    amount = input("How many do you want to generate?\n ")
     company = input("What do you want to generate? \nVisa, Mastercard, Enroute, Discover, JCB15, JCB16, or Voyager?\n")
 
     while len(numbers) < 3:
@@ -59,11 +59,5 @@ def main():
     else:
         main()
 
-def restart():
-    repeat = input("Do you want to generate 100 more?\n Yes or No?")
-    if repeat == "Yes":
-        main()
-    else:
-        exit()
-
 main()
+
