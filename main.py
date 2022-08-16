@@ -4,9 +4,10 @@ import random
 
 def main():
     numbers = []
+    complete = []
 
     list = ["Visa", "Mastercard", "Enroute", "Discover", "JCB15", "JCB16", "Voyager"]
-    amount = input("How many do you want to generate?\n ")
+    print("\nThis will generate 100 cards at once. You will have a chance to repeat after.")
     company = input("What do you want to generate? \nVisa, Mastercard, Enroute, Discover, JCB15, JCB16, or Voyager?\n")
 
     while len(numbers) < 3:
@@ -16,31 +17,38 @@ def main():
 
     def visa():
         beginning = str(random.randrange(4000, 4999))
-        print(beginning, listToString)
+        end = beginning + " " + listToString
+        print(end)
 
     def mastercard():
         beginning = random.randrange(5100, 5599)
-        print(beginning, listToString)
+        end = beginning + " " + listToString
+        print(end)
 
     def enroute():
         beginning = random.choice([2014, 2149])
-        print(beginning, listToString)
+        end = beginning + " " + listToString
+        print(end)
 
     def discover():
         beginning = 6011
-        print(beginning, listToString)
+        end = beginning + " " + listToString
+        print(end)
 
     def jcb15():
         beginning = random.choice([1800, 2100])
-        print(beginning, listToString)
+        end = beginning + " " + listToString
+        print(end)
 
     def jcb16():
         beginning = random.choice([3088, 3096, 3112, 3158, 3337, 3528])
-        print(beginning, listToString)
+        end = beginning + " " + listToString
+        print(end)
 
     def voyager():
         beginning = 8699
-        print(beginning, listToString)
+        end = beginning + " " + listToString
+        print(end)
 
     if company == "Visa" in list:
         visa()
@@ -58,6 +66,10 @@ def main():
         voyager()
     else:
         main()
-
 main()
+repeat = input("Do you want to generate 100 more?\nYes or No?")
 
+if repeat == "Yes":
+    main()
+else:
+    exit()
