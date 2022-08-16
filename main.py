@@ -10,44 +10,46 @@ def main():
     print("\nThis will generate 100 cards at once. You will have a chance to repeat after.")
     company = input("What do you want to generate? \nVisa, Mastercard, Enroute, Discover, JCB15, JCB16, or Voyager?\n")
 
-    while len(numbers) < 3:
-        repeat = random.randrange(1000, 9999)
-        numbers.append(repeat)
-        listToString = ' '.join([str(i) for i in numbers])
+    def lastThree():
+        while len(numbers) < 3:
+            repeat = random.randrange(1000, 9999)
+            numbers.append(repeat)
+            listToString = ' '.join([str(i) for i in numbers])
+        return listToString
 
     def visa():
         beginning = str(random.randrange(4000, 4999))
-        end = beginning + " " + listToString
+        end = beginning + " " + lastThree()
         print(end)
 
     def mastercard():
         beginning = random.randrange(5100, 5599)
-        end = beginning + " " + listToString
+        end = beginning + " " + lastThree()
         print(end)
 
     def enroute():
         beginning = random.choice([2014, 2149])
-        end = beginning + " " + listToString
+        end = beginning + " " + lastThree()
         print(end)
 
     def discover():
         beginning = 6011
-        end = beginning + " " + listToString
+        end = beginning + " " + lastThree()
         print(end)
 
     def jcb15():
         beginning = random.choice([1800, 2100])
-        end = beginning + " " + listToString
+        end = beginning + " " + lastThree()
         print(end)
 
     def jcb16():
         beginning = random.choice([3088, 3096, 3112, 3158, 3337, 3528])
-        end = beginning + " " + listToString
+        end = beginning + " " + lastThree()
         print(end)
 
     def voyager():
         beginning = 8699
-        end = beginning + " " + listToString
+        end = beginning + " " + lastThree()
         print(end)
 
     if company == "Visa" in list:
