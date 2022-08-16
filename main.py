@@ -1,14 +1,16 @@
 import random
 
-
-
 def main():
     numbers = []
     complete = []
 
     list = ["Visa", "Mastercard", "Enroute", "Discover", "JCB15", "JCB16", "Voyager"]
-    print("\nThis will generate 100 cards at once. You will have a chance to repeat after.")
+    firstNames = ["Bob", "Greg", "Matt", "Drake", "Odie", "Chip", "Fay", "Tilly", "Amy", "Emily", "Lalia", "Ronat", "Ivria", "Elise", "Bel", "Vereena", "Nana", "Meta", "Thabiti", "Jie", "Rollo", "Cort", "Akanni", "Rothwell", "Emillia", "Pero"]
+    lastNames = ["Smith", "Morva", "Svay", "Capellan", "Hunter", "Huttman", "Eheler", "Davidson", "Rook", "Sheen", "Vacio", "Kingswood", "Mcfolley", "Degnan", "Saric", "Wickert", "Merlini", "Delorme", "Xu", "Jr", "Warwick", "Crill", "Wicked", "Lahue", "Swets", "Santos"]
     company = input("What do you want to generate? \nVisa, Mastercard, Enroute, Discover, JCB15, JCB16, or Voyager?\n")
+
+    def fullName():
+        while len(complete) < 2:
 
     def lastThree():
         while len(numbers) < 3:
@@ -16,6 +18,7 @@ def main():
             numbers.append(repeat)
             listToString = ' '.join([str(i) for i in numbers])
         return listToString
+
 
     def visa():
         beginning = str(random.randrange(4000, 4999))
