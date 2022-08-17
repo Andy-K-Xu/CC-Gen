@@ -17,7 +17,7 @@ This is a glorified random number generator made in Python. It does not use the 
 
 - Storing card info to notepad.
 
--Luhn Algorithm Check
+- Luhn Algorithm Check
 
 ### ❗ **Disclaimer**
 This is an educational project for me to learn coding. It shall not be used for malicious purposes. I do not promote my tools. I do not take responsibility for any bad usage of this tool.
