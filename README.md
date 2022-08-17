@@ -8,15 +8,14 @@ This is a glorified random number generator made in Python. It does not use the 
 
 - Attaching random exp date to cards.
 
+- Attaching random CVV to cards.
+
 ## 👀 **Things to Do:**
 - Leading Zeros.
 
 - Loops.
 
-- Attaching random CVC to cards.
-
 - Storing card info to notepad.
-
 
 ### ❗ **Disclaimer**
 This is an educational project for me to learn coding. It shall not be used for malicious purposes. I do not promote my tools. I do not take responsibility for any bad usage of this tool.
