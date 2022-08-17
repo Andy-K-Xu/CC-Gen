@@ -15,11 +15,15 @@ def main():
         full = nameOne + " " + nameTwo
         return full
 
-    def randomCVC():
+    def randomDate():
         month = str(random.randrange(1, 12))
         year = str(random.randrange(22, 42))
-        CVC = month + "/" + year
-        return CVC
+        date = month + "/" + year
+        return date
+
+    def randomCVV():
+        cvv = str(random.randrange(100,999))
+        return cvv
 
     def lastThree():
         while len(numbers) < 3:
@@ -31,44 +35,44 @@ def main():
 
     def visa():
         beginning = str(random.randrange(4000, 4999))
-        end = fullName() + ", " + beginning + " " + lastThree() + ", " + randomCVC()
+        end = "Name: " + fullName() + ", " + "Credit Card Number: " + beginning + " " + lastThree() + ", " + "Date: " + randomDate() + ", " + "CVV: " + randomCVV()
         print(end)
         return end
 
 
     def mastercard():
         beginning = str(random.randrange(5100, 5599))
-        end = fullName() + ", " + beginning + " " + lastThree() + ", " + randomCVC()
+        end = "Name: " + fullName() + ", " + "Credit Card Number: " + beginning + " " + lastThree() + ", " + "Date: " + randomDate() + ", " + "CVV: " + randomCVV()
         print(end)
         return end
 
     def enroute():
         beginning = str(random.choice([2014, 2149]))
-        end = fullName() + ", " + beginning + " " + lastThree() + ", " + randomCVC()
+        end = "Name: " + fullName() + ", " + "Credit Card Number: " + beginning + " " + lastThree() + ", " + "Date: " + randomDate() + ", " + "CVV: " + randomCVV()
         print(end)
         return end
 
     def discover():
         beginning = str(6011)
-        end = fullName() + ", " + beginning + " " + lastThree() + ", " + randomCVC()
+        end = "Name: " + fullName() + ", " + "Credit Card Number: " + beginning + " " + lastThree() + ", " + "Date: " + randomDate() + ", " + "CVV: " + randomCVV()
         print(end)
         return end
 
     def jcb15():
         beginning = str(random.choice([1800, 2100]))
-        end = fullName() + ", " + beginning + " " + lastThree() + ", " + randomCVC()
+        end = "Name: " + fullName() + ", " + "Credit Card Number: " + beginning + " " + lastThree() + ", " + "Date: " + randomDate() + ", " + "CVV: " + randomCVV()
         print(end)
         return end
 
     def jcb16():
         beginning = str(random.choice([3088, 3096, 3112, 3158, 3337, 3528]))
-        end = fullName() + ", " + beginning + " " + lastThree() + ", " + randomCVC()
+        end = "Name: " + fullName() + ", " + "Credit Card Number: " + beginning + " " + lastThree() + ", " + "Date: " + randomDate() + ", " + "CVV: " + randomCVV()
         print(end)
         return end
 
     def voyager():
         beginning = str(8699)
-        end = fullName() + ", " + beginning + " " + lastThree() + ", " + randomCVC()
+        end = "Name: " + fullName() + ", " + "Credit Card Number: " + beginning + " " + lastThree() + ", " + "Date: " + randomDate() + ", " + "CVV: " + randomCVV()
         print(end)
         return end
 
