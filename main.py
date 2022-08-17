@@ -10,7 +10,10 @@ def main():
     company = input("What do you want to generate? \nVisa, Mastercard, Enroute, Discover, JCB15, JCB16, or Voyager?\n")
 
     def fullName():
-        while len(complete) < 2:
+        nameOne = random.choice(firstNames)
+        nameTwo = random.choice(lastNames)
+        full = nameOne + " " + nameTwo
+        return full
 
     def lastThree():
         while len(numbers) < 3:
@@ -24,6 +27,7 @@ def main():
         beginning = str(random.randrange(4000, 4999))
         end = beginning + " " + lastThree()
         print(end)
+        print(fullName())
 
     def mastercard():
         beginning = random.randrange(5100, 5599)
