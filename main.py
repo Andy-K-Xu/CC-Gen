@@ -15,6 +15,12 @@ def main():
         full = nameOne + " " + nameTwo
         return full
 
+    def randomCVC():
+        month = str(random.randrange(1, 12))
+        year = str(random.randrange(22, 42))
+        CVC = month + "/" + year
+        return CVC
+
     def lastThree():
         while len(numbers) < 3:
             repeat = random.randrange(1000, 9999)
@@ -25,39 +31,46 @@ def main():
 
     def visa():
         beginning = str(random.randrange(4000, 4999))
-        end = beginning + " " + lastThree()
+        end = fullName() + ", " + beginning + " " + lastThree() + ", " + randomCVC()
         print(end)
-        print(fullName())
+        return end
+
 
     def mastercard():
-        beginning = random.randrange(5100, 5599)
-        end = beginning + " " + lastThree()
+        beginning = str(random.randrange(5100, 5599))
+        end = fullName() + ", " + beginning + " " + lastThree() + ", " + randomCVC()
         print(end)
+        return end
 
     def enroute():
-        beginning = random.choice([2014, 2149])
-        end = beginning + " " + lastThree()
+        beginning = str(random.choice([2014, 2149]))
+        end = fullName() + ", " + beginning + " " + lastThree() + ", " + randomCVC()
         print(end)
+        return end
 
     def discover():
-        beginning = 6011
-        end = beginning + " " + lastThree()
+        beginning = str(6011)
+        end = fullName() + ", " + beginning + " " + lastThree() + ", " + randomCVC()
         print(end)
+        return end
 
     def jcb15():
-        beginning = random.choice([1800, 2100])
-        end = beginning + " " + lastThree()
+        beginning = str(random.choice([1800, 2100]))
+        end = fullName() + ", " + beginning + " " + lastThree() + ", " + randomCVC()
         print(end)
+        return end
 
     def jcb16():
-        beginning = random.choice([3088, 3096, 3112, 3158, 3337, 3528])
-        end = beginning + " " + lastThree()
+        beginning = str(random.choice([3088, 3096, 3112, 3158, 3337, 3528]))
+        end = fullName() + ", " + beginning + " " + lastThree() + ", " + randomCVC()
         print(end)
+        return end
 
     def voyager():
-        beginning = 8699
-        end = beginning + " " + lastThree()
+        beginning = str(8699)
+        end = fullName() + ", " + beginning + " " + lastThree() + ", " + randomCVC()
         print(end)
+        return end
 
     if company == "Visa" in list:
         visa()
