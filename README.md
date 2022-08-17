@@ -4,14 +4,14 @@ This is a glorified random number generator made in Python. It does not use the 
 ## ✅ **Done:**
 - Companies that use 16 digit cards.
 
+- Attaching random name to card.
+
+- Attaching random exp date to card
+
 ## 👀 **Things to Do:**
 - Leading Zeros
 
 - Loops
-
-- Attaching random name to card
-
-- Attaching random exp date to card
 
 - Attaching random CVC to card
 
