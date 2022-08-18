@@ -2,12 +2,13 @@ import random
 
 def main():
     numbers = []
-    complete = []
 
     list = ["Visa", "Mastercard", "Enroute", "Discover", "JCB15", "JCB16", "Voyager"]
     firstNames = ["Bob", "Greg", "Matt", "Drake", "Odie", "Chip", "Fay", "Tilly", "Amy", "Emily", "Lalia", "Ronat", "Ivria", "Elise", "Bel", "Vereena", "Nana", "Meta", "Thabiti", "Jie", "Rollo", "Cort", "Akanni", "Rothwell", "Emillia", "Pero"]
     lastNames = ["Smith", "Morva", "Svay", "Capellan", "Hunter", "Huttman", "Eheler", "Davidson", "Rook", "Sheen", "Vacio", "Kingswood", "Mcfolley", "Degnan", "Saric", "Wickert", "Merlini", "Delorme", "Xu", "Jr", "Warwick", "Crill", "Wicked", "Lahue", "Swets", "Santos"]
     company = input("What do you want to generate? \nVisa, Mastercard, Enroute, Discover, JCB15, JCB16, or Voyager?\n")
+
+
 
     def fullName():
         nameOne = random.choice(firstNames)
@@ -76,6 +77,7 @@ def main():
         print(end)
         return end
 
+
     if company == "Visa" in list:
         visa()
     elif company == "Mastercard" in list:
@@ -92,10 +94,15 @@ def main():
         voyager()
     else:
         main()
-main()
-repeat = input("Do you want to generate 100 more?\nYes or No?")
 
-if repeat == "Yes":
-    main()
-else:
-    exit()
+def ask():
+    repeat = input("Do you want to generate another card?\nYes or No?\n")
+    if repeat == "Yes":
+        main()
+        ask()
+    else:
+        exit()
+
+#==start==#
+main()
+ask()
