@@ -10,10 +10,10 @@ This is a glorified random number generator made in Python. It does not use the 
 
 - Attaching random CVV to cards.
 
+- Loops (Keep asking to generate until stop).
+
 ## 👀 **Things to Do:**
 - Leading Zeros.
-
-- Loops.
 
 - Storing card info to notepad.
 
