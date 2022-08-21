@@ -35,49 +35,49 @@ def main():
 
     def visa():
         beginning = str(random.randrange(4000, 4999))
-        end = fullName() + " | " + beginning + " " + lastThree() + " | " + randomDate() + " | " + randomCVV()
+        end = "Visa: " + fullName() + " | " + beginning + " " + lastThree() + " | " + randomDate() + " | " + randomCVV()
         print(end)
         file.write(end + "\n")
         return end
 
     def mastercard():
         beginning = str(random.randrange(5100, 5599))
-        end = fullName() + " | " + beginning + " " + lastThree() + " | " + randomDate() + " | " + randomCVV()
+        end = "Mastercard: " + fullName() + " | " + beginning + " " + lastThree() + " | " + randomDate() + " | " + randomCVV()
         print(end)
         file.write(end + "\n")
         return end
 
     def enroute():
         beginning = str(random.choice([2014, 2149]))
-        end = fullName() + " | " + beginning + " " + lastThree() + " | " + randomDate() + " | " + randomCVV()
+        end = "Enroute: " + fullName() + " | " + beginning + " " + lastThree() + " | " + randomDate() + " | " + randomCVV()
         print(end)
         file.write(end + "\n")
         return end
 
     def discover():
         beginning = str(6011)
-        end = fullName() + " | " + beginning + " " + lastThree() + " | " + randomDate() + " | " + randomCVV()
+        end = "Discover: " + fullName() + " | " + beginning + " " + lastThree() + " | " + randomDate() + " | " + randomCVV()
         print(end)
         file.write(end + "\n")
         return end
 
     def jcb15():
         beginning = str(random.choice([1800, 2100]))
-        end = fullName() + " | " + beginning + " " + lastThree() + " | " + randomDate() + " | " + randomCVV()
+        end = "JCB15: " + fullName() + " | " + beginning + " " + lastThree() + " | " + randomDate() + " | " + randomCVV()
         print(end)
         file.write(end + "\n")
         return end
 
     def jcb16():
         beginning = str(random.choice([3088, 3096, 3112, 3158, 3337, 3528]))
-        end = fullName() + " | " + beginning + " " + lastThree() + " | " + randomDate() + " | " + randomCVV()
+        end = "JCB16: " + fullName() + " | " + beginning + " " + lastThree() + " | " + randomDate() + " | " + randomCVV()
         print(end)
         file.write(end + "\n")
         return end
 
     def voyager():
         beginning = str(8699)
-        end = fullName() + " | " + beginning + " " + lastThree() + " | " + randomDate() + " | " + randomCVV()
+        end = "Voyager: " + fullName() + " | " + beginning + " " + lastThree() + " | " + randomDate() + " | " + randomCVV()
         print(end)
         file.write(end + "\n")
         return end
@@ -107,9 +107,11 @@ def ask():
             output.write("end")
         main()
         ask()
-    else:
+    elif repeat == "No":
         file.close()
         exit()
+    else:
+        ask()
 
 
 
