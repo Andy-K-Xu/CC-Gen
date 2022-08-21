@@ -14,8 +14,9 @@ This is a glorified random number generator made in Python. It does not use the 
 
 - Storing card info to notepad.
 
-## 👀 **Things to Do:**
 - Leading Zeros.
+
+## 👀 **Things to Do:**
 
 - Luhn Algorithm Check
 
