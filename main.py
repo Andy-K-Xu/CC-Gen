@@ -1,4 +1,7 @@
 import random
+import datetime
+
+currentDate = datetime.date.today()
 
 file = open(r"Cards.txt", "w")
 
@@ -22,7 +25,8 @@ def main():
 
     def randomDate():
         month = str(random.randrange(1, 12))
-        year = str(random.randrange(22, 42))
+        randomEXP = random.randrange(3,5) + currentDate.year
+        year = str(randomEXP)
         date = month + "/" + year
         return date
 
