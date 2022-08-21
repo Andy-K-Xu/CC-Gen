@@ -1,5 +1,6 @@
 import random
 import datetime
+import names
 
 currentDate = datetime.date.today()
 
@@ -9,34 +10,25 @@ def main():
     numbers = []
 
     list = ["Visa", "Mastercard", "Enroute", "Discover", "JCB15", "JCB16", "Voyager"]
-    firstNames = ["Bob", "Greg", "Matt", "Drake", "Odie", "Chip", "Fay", "Tilly", "Amy", "Emily", "Lalia", "Ronat",
-                  "Ivria", "Elise", "Bel", "Vereena", "Nana", "Meta", "Thabiti", "Jie", "Rollo", "Cort", "Akanni",
-                  "Rothwell", "Emillia", "Pero"]
-    lastNames = ["Smith", "Morva", "Svay", "Capellan", "Hunter", "Huttman", "Eheler", "Davidson", "Rook", "Sheen",
-                 "Vacio", "Kingswood", "Mcfolley", "Degnan", "Saric", "Wickert", "Merlini", "Delorme", "Xu", "Jr",
-                 "Warwick", "Crill", "Wicked", "Lahue", "Swets", "Santos"]
     company = input("What do you want to generate? \nVisa, Mastercard, Enroute, Discover, JCB15, JCB16, or Voyager?\n")
 
     def fullName():
-        nameOne = random.choice(firstNames)
-        nameTwo = random.choice(lastNames)
-        full = nameOne + " " + nameTwo
+        full = names.get_full_name()
         return full
 
     def randomDate():
-        month = str(random.randrange(1, 12))
-        randomEXP = random.randrange(3,5) + currentDate.year
-        year = str(randomEXP)
-        date = month + "/" + year
+        month = str(random.randrange(1, 12)).zfill(2)
+        randomEXP = str(random.randrange(3,5) + currentDate.year)
+        date = month + "/" + randomEXP
         return date
 
     def randomCVV():
-        cvv = str(random.randrange(100, 999))
+        cvv = str(random.randrange(1, 999)).zfill(3)
         return cvv
 
     def lastThree():
         while len(numbers) < 3:
-            repeat = random.randrange(1000, 9999)
+            repeat = str(random.randrange(1, 9999)).zfill(4)
             numbers.append(repeat)
             listToString = ' '.join([str(i) for i in numbers])
         return listToString
