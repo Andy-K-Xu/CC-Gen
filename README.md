@@ -12,10 +12,10 @@ This is a glorified random number generator made in Python. It does not use the 
 
 - Loops (Keep asking to generate until stop).
 
+- Storing card info to notepad.
+
 ## 👀 **Things to Do:**
 - Leading Zeros.
-
-- Storing card info to notepad.
 
 - Luhn Algorithm Check
 
