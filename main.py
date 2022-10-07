@@ -33,72 +33,50 @@ def main():
             listToString = ' '.join([str(i) for i in numbers])
         return listToString
 
-    def visa():
+    if company == "Visa" in list:
         beginning = str(random.randrange(4000, 4999))
         end = "Visa: " + fullName() + " | " + beginning + " " + lastThree() + " | " + randomDate() + " | " + randomCVV()
         print(end)
         file.write(end + "\n")
         return end
-
-    def mastercard():
+    elif company == "Mastercard" in list:
         beginning = str(random.randrange(5100, 5599))
         end = "Mastercard: " + fullName() + " | " + beginning + " " + lastThree() + " | " + randomDate() + " | " + randomCVV()
         print(end)
         file.write(end + "\n")
         return end
-
-    def enroute():
+    elif company == "Enroute" in list:
         beginning = str(random.choice([2014, 2149]))
         end = "Enroute: " + fullName() + " | " + beginning + " " + lastThree() + " | " + randomDate() + " | " + randomCVV()
         print(end)
         file.write(end + "\n")
         return end
-
-    def discover():
+    elif company == "Discover" in list:
         beginning = str(6011)
         end = "Discover: " + fullName() + " | " + beginning + " " + lastThree() + " | " + randomDate() + " | " + randomCVV()
         print(end)
         file.write(end + "\n")
         return end
-
-    def jcb15():
+    elif company == "JCB15" in list:
         beginning = str(random.choice([1800, 2100]))
         end = "JCB15: " + fullName() + " | " + beginning + " " + lastThree() + " | " + randomDate() + " | " + randomCVV()
         print(end)
         file.write(end + "\n")
         return end
-
-    def jcb16():
+    elif company == "JCB16" in list:
         beginning = str(random.choice([3088, 3096, 3112, 3158, 3337, 3528]))
         end = "JCB16: " + fullName() + " | " + beginning + " " + lastThree() + " | " + randomDate() + " | " + randomCVV()
         print(end)
         file.write(end + "\n")
         return end
-
-    def voyager():
+    elif company == "Voyager" in list:
         beginning = str(8699)
         end = "Voyager: " + fullName() + " | " + beginning + " " + lastThree() + " | " + randomDate() + " | " + randomCVV()
         print(end)
         file.write(end + "\n")
         return end
-
-    if company == "Visa" in list:
-        visa()
-    elif company == "Mastercard" in list:
-        mastercard()
-    elif company == "Enroute" in list:
-        enroute()
-    elif company == "Discover" in list:
-        discover()
-    elif company == "JCB15" in list:
-        jcb15()
-    elif company == "JCB16" in list:
-        jcb16()
-    elif company == "Voyager" in list:
-        voyager()
     else:
         main()
-
 
 def ask():
     repeat = input("Do you want to generate another card?\nYes or No?\n")
@@ -112,7 +90,6 @@ def ask():
         exit()
     else:
         ask()
-
 
 
 # ==start==#
